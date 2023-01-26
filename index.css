@@ -25,6 +25,7 @@
 /* padding and border are included in the total width and height of an element. */
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* General */
