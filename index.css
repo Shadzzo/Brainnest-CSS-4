@@ -28,6 +28,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     scroll-padding-top: 77px;
+    text-decoration: none;
 }
 
 /* General */
@@ -45,6 +46,7 @@ body{
     color: var(--textgray);
     background-color: var(--pageblue);
     transition: background-color 0.8s ease;
+    cursor: pointer;
 }
 
 .btn:hover{
@@ -65,10 +67,6 @@ body{
     max-width: 1150px;
 }
 
-.header-logo-link{
-    text-decoration-line: none;
-}
-
 .header-logo{
     font-family: 'RobotoBold', sans-serif;
     font-size: 24px;
@@ -83,7 +81,6 @@ body{
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: var(--textgray);
-    text-decoration-line: none;
 }
 
 .header-link:hover{
@@ -92,7 +89,6 @@ body{
 
 /* Introduction Section */
 .intro-section{
-    width: 100%;
     background-color: var(--darkblue);
     padding: 120px 200px;
     padding-top: 200px;
@@ -101,6 +97,7 @@ body{
 .intro-wrapper{
     margin: 0 auto;
     max-width: 1150px;
+    color: var(--textgray);
 }
 
 .intro-title{
@@ -115,7 +112,6 @@ body{
     padding-right: 50px;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    color: var(--textgray);
 }
 
 .intro-button{
@@ -128,7 +124,6 @@ body{
     font-size: 18px;
     font-family: 'Robotobold', sans-serif;
     text-align: center;
-    color: var(--textgray);
     background-color: var(--nullgray);
 }
 
@@ -136,7 +131,6 @@ body{
 .info-section{
     margin: 0 auto;
     max-width: 1550px;
-    width: 100%;
     padding: 130px 300px;
     padding-top: 0;
 }
@@ -168,6 +162,7 @@ body{
 
 .entry-caption{
     margin-top: 5px;
+    margin-left: 5px;
     width: 170px;
 }
 
@@ -179,7 +174,6 @@ body{
 .quote-wrapper{
     margin: 0 auto;
     max-width: 1550px;
-    width: 100%;
     padding: 100px 320px;
 }
 
@@ -230,7 +224,6 @@ body{
 /* Footer */
 .footer-section{
     margin: 0 auto;
-    width: 100%;
     padding: 20px;
     background-color: var(--darkblue);
 }
@@ -247,7 +240,7 @@ body{
     position: fixed;
     inset: 0; 
     background: rgba(0, 0, 0, 0.7);
-    transition: opacity 500ms;
+    transition: opacity 0.5s;
     visibility: hidden;
     opacity: 0;
 }
@@ -261,7 +254,7 @@ body{
     position: relative;
     margin: 40vh auto;
     padding: 20px;
-    background-color: #1D1D1D;
+    background-color: var(--popupblack);
     color: var(--headerwhite);
     border-radius: 20px;
     transition: all 2s ease;
@@ -281,7 +274,6 @@ body{
     transition: all 0.2s;
     font-size: 30px;
     font-weight: bold;
-    text-decoration: none;
     color: var(--pageblue);
 }
 
@@ -296,7 +288,7 @@ body{
 }
 
 /* display options above 550px devices */
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 850px) {
     /* Navigation Bar */
     .navbar-wrapper{
         display: flex;
@@ -324,6 +316,7 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
+        min-width: 250px;
     }
 
     /* Information Section */  
@@ -345,6 +338,71 @@ body{
     }
 
     /* Popup Screen */
+    .popup-wrapper{
+        min-width: 350px;
+        width: 18%;
+        height: 200px;
+    }
+}
+
+/* Display options on devices under 850px */
+@media screen and (max-width: 850px) {
+    /* Navigation bar */
+    .header-logo{
+        text-align: center;
+    }
+
+    .header-link-wrapper{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        column-gap: 20px;
+    }
+    
+    /* Intro section */
+    .intro-wrapper{
+        text-align: center;
+    }
+
+    .intro-text{
+        padding-right: 0px;
+    }
+
+    .intro-button{
+        margin-bottom: 20px;
+    }
+
+    /* Info section */
+    .info-section{
+        padding: 0;
+    }
+
+    .info-title{
+        margin: 25px auto;
+    }
+
+    .info-entry{
+        margin: 0 auto;
+        margin-bottom: 80px;
+    }
+
+    /* Quote Section */
+    .quote-wrapper{
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Contact Section */
+    .call-section{
+        padding: 40px;
+    }
+
+    .call-wrapper{
+        text-align: center;
+        padding: 10px;
+    }
+    
+    /* Pop-up */
     .popup-wrapper{
         min-width: 350px;
         width: 18%;
