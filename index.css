@@ -34,15 +34,6 @@ body{
     padding: 0;
 }
 
-.main-body{
-    background: linear-gradient(
-        to bottom,
-        var(--darkblue) 0% 25%,
-        var(--headerwhite) 25% 94.8%,
-        var(--darkblue) 94.8% 100%            
-    )
-}
-
 .btn{
     font-size: 18px;
     font-family: 'RobotoBold', sans-serif;
@@ -85,11 +76,14 @@ body{
 
 /* Introduction Section */
 .intro-section{
-    margin: 0 auto;
-    max-width: 1550px;
     width: 100%;
     background-color: var(--darkblue);
     padding: 120px 200px;
+}
+
+.intro-wrapper{
+    margin: 0 auto;
+    max-width: 1150px;
 }
 
 .intro-title{
@@ -101,6 +95,7 @@ body{
 
 .intro-text{
     margin-top: 5px;
+    padding-right: 50px;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: var(--textgray);
@@ -111,9 +106,10 @@ body{
 }
 
 .intro-image{
+    width: 100%;
+    height: 240px;
     font-size: 18px;
     font-family: 'Robotobold', sans-serif;
-    line-height: 240px;
     text-align: center;
     color: var(--textgray);
     background-color: var(--nullgray);
@@ -124,7 +120,7 @@ body{
     margin: 0 auto;
     max-width: 1550px;
     width: 100%;
-    padding: 200px 300px;
+    padding: 130px 300px;
     padding-top: 0;
 }
 
@@ -139,6 +135,7 @@ body{
 .info-entry{
     height: 180px;
     width: 180px;
+    margin-bottom: 70px;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: var(--nullgray);
@@ -183,7 +180,6 @@ body{
 .call-section{
     margin: 0 auto;
     max-width: 1550px;
-    width: 100%;
     padding: 100px 200px;
 }
 
@@ -209,13 +205,11 @@ body{
 
 .call-button{
     border: 3px solid var(--headerwhite);
-    margin-top: -25px;
 }
 
 /* Footer */
 .footer-section{
     margin: 0 auto;
-    max-width: 1550px;
     width: 100%;
     padding: 20px;
     background-color: var(--darkblue);
@@ -230,15 +224,12 @@ body{
 
 /* display options above 550px devices */
 @media screen and (min-width: 550px) {
-    body{
-        min-width: 950px;
-    }
-
     /* Navigation Bar */
     .navbar{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 50px;
     }
     
     .header-link-wrapper{
@@ -248,19 +239,17 @@ body{
     }
 
     /* Introduction Section */
-    .intro-section{
-        display: grid;
-        grid-template-columns: repeat(15, 1fr);
-    }
-    
-    .intro-wrapper{    
-        grid-column: 1/7;
-        grid-row: 1/2;
+    .intro-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
     }
 
     .intro-image{
-        grid-column: 8/16;
-        grid-row: 1/2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     /* Information Section */  
@@ -268,27 +257,16 @@ body{
         display: flex;
         align-items: center;
         justify-content: space-around;
+        flex-wrap: wrap;
         gap: 15px;
     }
 
     /* Call Section */
     .call-wrapper{
-        display: grid;
-        grid-template-columns: repeat(10, 1fr);
-    }
-
-    .call-title{
-        grid-column: 1/6;
-        grid-row: 1/2;
-    }
-
-    .call-text{
-        grid-column: 1/9;
-        grid-row: 2/2;
-    }
-
-    .call-button{
-        grid-column: 10/11;
-        grid-row: 2/2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
     }
 }
