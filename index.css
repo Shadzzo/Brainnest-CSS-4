@@ -15,7 +15,7 @@
 @font-face {
     font-family: "RobotoBold";
     src: url(fonts/Roboto-Bold.ttf) format('truetype');
-}
+} 
 
 @font-face {
     font-family: "RobotoLightItalic";
@@ -44,6 +44,13 @@ body{
 }
 
 .btn{
+    font-size: 18px;
+    font-family: 'RobotoBold', sans-serif;
+    height: 40px;
+    width: 130px;
+    border-radius: 8px;
+    color: var(--textgray);
+    background-color: var(--pageblue);
     transition: background-color 0.8s ease;
 }
 
@@ -86,28 +93,21 @@ body{
 }
 
 .intro-title{
+    margin: 0 auto;
     font-family: 'RobotoBold', sans-serif;
     font-size: 48px;
     color: var(--headerwhite);
-    margin: 0;
 }
 
 .intro-text{
+    margin-top: 5px;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: var(--textgray);
-    margin-top: 5px;
 }
 
 .intro-button{
-    font-size: 18px;
-    font-family: 'RobotoBold', sans-serif;
-    color: var(--textgray);
-    background-color: var(--pageblue);
-    height: 40px;
-    width: 130px;
     border: none;
-    border-radius: 8px;
 }
 
 .intro-image{
@@ -124,9 +124,8 @@ body{
     margin: 0 auto;
     max-width: 1550px;
     width: 100%;
-    padding-left: 300px;
-    padding-right: 300px;
-    padding-bottom: 200px;
+    padding: 200px 300px;
+    padding-top: 0;
 }
 
 .info-title{
@@ -209,14 +208,7 @@ body{
 }
 
 .call-button{
-    font-size: 18px;
-    font-family: 'RobotoBold', sans-serif;
-    color: var(--textgray);
-    background-color: var(--pageblue);
-    height: 40px;
-    width: 130px;
     border: 3px solid var(--headerwhite);
-    border-radius: 8px;
     margin-top: -25px;
 }
 
@@ -236,9 +228,8 @@ body{
     text-align: center;
 }
 
-/* display options above 450px devices */
-@media screen and (min-width: 450px) {
-
+/* display options above 550px devices */
+@media screen and (min-width: 550px) {
     body{
         min-width: 950px;
     }
@@ -277,6 +268,7 @@ body{
         display: flex;
         align-items: center;
         justify-content: space-around;
+        gap: 15px;
     }
 
     /* Call Section */
