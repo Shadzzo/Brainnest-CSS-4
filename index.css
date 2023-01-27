@@ -43,6 +43,10 @@ body{
     )
 }
 
+.btn{
+    transition: background-color 0.8s ease;
+}
+
 .btn:hover{
     transition: background-color 0.8s ease;
     background-color: var(--hoverblue);
