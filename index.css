@@ -26,6 +26,7 @@
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    scroll-padding-top: 77px;
 }
 
 /* General */
@@ -52,15 +53,29 @@ body{
 
 /* Navigation Bar */
 .navbar{
+    position: fixed;
     background-color: var(--darkblue);
     width: 100%;
-    padding: 0 200px;
+    padding: 0px 200px;
+}
+
+.navbar-wrapper{
+    margin: 0 auto;
+    max-width: 1150px;
+}
+
+.header-logo-link{
+    text-decoration-line: none;
 }
 
 .header-logo{
     font-family: 'RobotoBold', sans-serif;
     font-size: 24px;
     color: var(--headerwhite);
+}
+
+.header-logo:hover{
+    color: var(--pageblue);
 }
 
 .header-link{
@@ -79,6 +94,7 @@ body{
     width: 100%;
     background-color: var(--darkblue);
     padding: 120px 200px;
+    padding-top: 200px;
 }
 
 .intro-wrapper{
@@ -156,11 +172,14 @@ body{
 
 /* Quote Section */
 .quote-section{
+    background-color: var(--textgray);
+}
+
+.quote-wrapper{
     margin: 0 auto;
     max-width: 1550px;
     width: 100%;
     padding: 100px 320px;
-    background-color: var(--textgray);
 }
 
 .quote-text{
@@ -225,11 +244,12 @@ body{
 /* display options above 550px devices */
 @media screen and (min-width: 550px) {
     /* Navigation Bar */
-    .navbar{
+    .navbar-wrapper{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 50px;
+        flex-wrap: wrap;
+        column-gap: 50px;
     }
     
     .header-link-wrapper{
