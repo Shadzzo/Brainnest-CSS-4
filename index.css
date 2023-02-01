@@ -287,7 +287,7 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-/* display options above 550px devices */
+/* display options above 850px devices */
 @media screen and (min-width: 850px) {
     /* Navigation Bar */
     .navbar-wrapper{
